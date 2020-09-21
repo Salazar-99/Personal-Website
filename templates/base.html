@@ -7,18 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" type="image/png" href="static/images/logo.png">
     {% block head %}
     <title>{% block title %}{% endblock %}Gerardo Salazar</title>
     {% endblock %}
 </head>
 
 {% block body %}
-    <body style="background-color:#313131">
+    <body style="background-color:#212121">
         <!--Navbar-->
         {% block navbar %}
         <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#121212">
             <a class="navbar-brand" href="/">
-                <b>GS</b>
+                <img src="static/images/logo-2.png" style="max-width: 40%; height: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
