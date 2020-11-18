@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% from 'bootstrap/form.html' import render_form %} {% block content %} {% block page_content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 pt-5 pl-5 pb-5">
+        <!--Logo-->
+        <img src="{{ url_for('static', filename='images/pokemon.png') }}">
+        <!--Training Image-->
+        <img src="{{ url_for('static', filename='images/pokemon-example.jpg') }}">
+        <!--Generated Image-->
+        <!--Form-->
+        {{ render_form(form) }}
+    </div>
+  </div>
+</div>
+{% endblock %} {% endblock %}

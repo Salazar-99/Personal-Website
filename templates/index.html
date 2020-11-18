@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %} {% block page_content %}
+<!--TODO: Write CSS rule for white text to reduce redundancy-->
 <!--Page structure-->
 <div class="container-fluid">
   <div class="row h-100 justify-content-start">
@@ -11,19 +12,66 @@
       <h3 style="color: white;">Gerardo Salazar</h3>
       <h5><a href="https://github.com/Salazar-99" style="color: rgb(197, 197, 197);">GitHub</a></h5>
       <h5><a href="https://www.linkedin.com/in/gerardo-salazar-62196a148/" style="color: rgb(197, 197, 197);"">LinkedIn</a></h5>
+      <h5><a href="mailto:gerardo.salazar@utexas.edu" style="color: rgb(197, 197, 197);"">Email</a></h5>
     </div>
     <!--Column for content-->
-    <div class="col-6 pt-5 pl-5" id="content-block">
+    <div class="col-6 pt-5 pl-5 pb-5" id="content-block">
       <!--Header-->
       <h1 class="text" style="color: white;">Hi, I'm <span style="color: 50B8FF">Gerardo</span></h1>
       <!--About Me-->
-      <p style="color: white">I like working on interesting problems. As a kid this drove my interest in Mathematics and Physics so
-        I ended up studying both at The University of Texas at Austin.
-        Nowadays I am taking the fundamental skills I gained through my formal studies and applying them to the fields of
-        Data Science and Machine Learning.</p>
-        <p style="color: white"> I am passionate about</p>
-      <!--Contact Me Form-->
-      <h2 class="text" style="color: white;">Leave Me A Message</h2>
+      <p style="color: white">I am a recent Physics and Math grad looking for career opportunities in Data Science, Machine 
+        Learning, and Software Engineering. Put simply, my mission is to make a positive impact in the world with math and 
+        code. My greatest strength is my passion for learning. I am a firm believer that the real treasure of every journey
+        is the friends we make along the way.</p>
+      <!--Working On-->
+      <h2 class="text" style="color: white;">What I'm <span style="color: 50B8FF">Working On</span></h2>
+      <p style="color: white;">I am finishing up the first release of <a href="https://github.com/Salazar-99/MGKDB-Web"> MGKDB-Web </a>. I am also learning about embedded sytems and experimenting with an Arduino UNO kit.
+      I'm learning C to help with that. I am always looking for ways to practice and extend my Software Engineering, Machine Learning, and Data Science skills.</p>
+      <!--Reading-->
+      <h2 class="text" style="color: white;"> What I'm <span style="color: 50B8FF">Reading</span></h2>
+      <p style="color: white"> I like having multiple books to read at the same time, it keeps things fresh. Below are the books I am currently reading, my motivation for reading them, and some thoughts about them.
+      </p>
+      <h5 class="text" style="color: white;"> <i>The Annotated Turing</i></h5>
+      <p style="color: white">by Charles Petzold</p>
+      <p style="color: white">Does there exist an algorithm which takes as input a mathematical statement and returns as output whether or not
+        the statement is true in any structure satisfying a set of predefined axioms? This is David Hilbert's famous
+        Entscheidungsproblem, which he posed in 1928. In 1936, Alan Turing published his seminal paper
+        "On Computable Numbers, With An Application To The Entscheidungsproblem." In it, he describes the construction
+        of mathematical objects now known as Turing Machines and through their application proves that there exists no
+        solution to the Entscheidungsproblem in the general case. His work on Turing Machines formed the theoretical
+        foundations underlying all of modern computing. This book steps through the original paper offering helpful
+        explanations, clarifications, and examples along the way. Although I previously had a cursory understanding of
+        the Turing model of computation from a course in Algorithms and Complexity, I am finding that stepping through
+        the constructive proof via the words of Turing himself is providing me with a much deeper understanding.
+        Paraphrasing the author, perhaps the most interesting aspect of the paper is that before anybody really knew
+        what digital computers could do, Turing laid out what they couldn't do. </p>
+        <h5 class="text" style="color: white;"> <i>The Art of Doing Science and Engineering: Learning to Learn</i> </h5>
+        <p style="color: white">by Richard W. Hamming</p>
+        <p style="color: white">Throughout my education I was often bothered by questions like: "How did Einstein get to the idea of spacetime
+          curvature and the Field Equations?", "How did mathematicians realize that this definition of a Group would yield
+          such a rich theory?", and "How did Hilbert know this was the right way to formulate Quantum Mechanics?" Sometimes 
+          I found satisfying answers and sometimes I did not. When we learn about technical things we most often get the
+          polished version resultant of decades or centuries of refinement and hindsight but rarely were the original ideas
+          so well organized. In this book Richard Hamming describes the thought processes behind some of the biggest technical
+          achievements in electrical and computer engineering of the last century. He posits that one can train themselves to
+          be an effective thinker and uses the examples in the book to illustrate some of the ways one might achieve that.
+          Thinking about the way that you think, often referred to as metacognition, is a topic of great interest to me and
+          this is one of the only books I've stumbled upon that treats it in a technical context. The notion that you can
+          train yourself to have more great ideas is a fascinating one. </p>
+        <h5 style="color: white"><i>The Elements of Computing Systems: Building A Modern Computer From First Principles</i> </h5>
+        <p style="color: white">by Noam Nisan, Shimon Schocken</p>
+        <p style="color: white">When the famed physicist Richard Feynman passed away in 1988 he left two statements on his blackboard
+          "What I cannot create I do not understand" and "Know how to solve every problem that has been solved."
+          I came across an image of that final blackboard early on in my Physics studies and it has stuck with me ever since.
+          This book walks you through the construction of a rudimentary modern computer starting with boolean alegbra and logic gates
+          all the way up to building an operating system and high level programming language on top of that. It comes with software tools
+          and projects to complete along the way. I'm really enjoying learning how to create a computer from first principles and thus
+          really understanding one of the most important tools in our modern world.  </p>
+        <h5 style="color: white"><i>Unix and Linux System Administration Handbook</i></h5>
+        <p style="color: white"> by Garth Snyder, Evi Nemeth, Trent Hein, Ben Whaley</p>
+        <p style="color: white">I have been using Linux (more specifically the latest Ubuntu distribution) as my main operating system for a little over a year now.
+          This book is a reference manual for all things Unix and Linux. While I can see it coming in handy in my career I'm mostly reading select chapters
+          to gain a better understanding of what's going on under the hood of the systems I use every day. </p>
     </div>
   </div>
 </div>
