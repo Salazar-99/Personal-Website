@@ -50,6 +50,7 @@ def index():
 def resume():
     return send_file('static/resume.pdf', as_attachment=True, attachment_filename='gerardo_salazar.pdf')
 
+#TODO: Update POKEMON_URL once API is deployed
 @app.route('/pokemon')
 def pokemon():
     form = PokemonForm()
@@ -57,3 +58,7 @@ def pokemon():
         image = requests.get(POKEMON_URL)
         render_template('pokemon.html', image=image)
     render_template('pokemon.html', image=None)
+
+#Entrypoint for Gunicorn
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
