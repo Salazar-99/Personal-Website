@@ -46,10 +46,6 @@ bootstrap = Bootstrap(app)
 def index():
     return render_template('index.html')
 
-@app.route('/resume')
-def resume():
-    return send_file('static/resume.pdf', as_attachment=True, attachment_filename='gerardo_salazar.pdf')
-
 #TODO: Update POKEMON_URL once API is deployed
 @app.route('/pokemon')
 def pokemon():
