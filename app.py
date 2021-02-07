@@ -46,15 +46,6 @@ bootstrap = Bootstrap(app)
 def index():
     return render_template('index.html')
 
-#TODO: Update POKEMON_URL once API is deployed
-@app.route('/pokemon')
-def pokemon():
-    form = PokemonForm()
-    if form.validate_on_submit():
-        image = requests.get(POKEMON_URL)
-        render_template('pokemon.html', image=image)
-    render_template('pokemon.html', image=None)
-
 #Entrypoint for Gunicorn
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
