@@ -1,14 +1,17 @@
-#Add a testing rule
- 
-development
+development:
+	docker build -f Dockerfile.dev -t personal-site-dev:latest .
 	docker-compose -f docker-compose.dev.yml up
 
-deploy
+test:
+	pytest
+
+deploy:
 	make build
 	make production
 
-build
-	docker-compose -f docker-compose.production.yml build
+build:
+	docker build -f Dockerfile -t personal-site:latest .
+	docker build -f nginx/Dockerfile -t personal-site-nginx:latest .
 
-production
+production:
 	docker-compose -f docker-compose.production.yml up

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
-from config import config
+from .config import config
 from flask_pymongo import PyMongo
 
 bootstrap = Bootstrap()

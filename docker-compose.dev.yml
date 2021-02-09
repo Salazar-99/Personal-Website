@@ -3,12 +3,12 @@ version: '3.8'
 services:
   app:
     container_name: app
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile app:app
+    image: personal-site-dev:latest
+    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile - "app:create_app('development')"
     env_file: .env
     environment:
       - CONFIG=development
     volumes:
       - "./app:/app"
+    ports:
+      - "5000:5000"

@@ -8,5 +8,5 @@ def index():
 
 @main.route('/blog')
 def blog():
-    #Fetch posts
-    return render_template('blog.html', posts=posts)
+    #Fetch posts then pass them to render_template
+    return render_template('blog.html')
