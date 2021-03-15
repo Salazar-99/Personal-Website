@@ -24,13 +24,21 @@
     </div>
 {% endmacro %}
 
-{% macro render_project(title, description, tags) %}
-    <div class="card-project">
-        <div class="card-body">
-            
+{% macro render_project(title, description, tags, link) %}
+    <div class="card-project shadow pt-3 pr-3">
+        <div class="card-body" style="position: relative;">
+            <div class="container d-flex align-items-center" style="padding-left: 0px;">
+                <img src="{{ url_for('static', filename='icons/repo.png', _external=True) }}" class="repo-icon">
+                <a href="{{ link }}" target="_blank">
+                    <h3 class="repo-title">{{ title }}</h3>
+                </a>
+            </div>
+            <p class="repo-description">{{ description }}</p>
         </div>
-        <div class="card-footer">
-
+        <div class="card-footer d-flex align-items-start flex-wrap" style="padding-bottom: 0px;">
+            {% for tag in tags %}
+                <p class="repo-tag pr-3">{{ tag }}</p>
+            {% endfor %}
         </div>
     </div>
 {% endmacro %}

@@ -90,13 +90,20 @@
       <h2 class="mt-0">Some Projects</h2>
     </div>
     <div class="container d-flex flex-column flex-lg-row align-items-start" style="padding: 0px;">
-      <div class="container pt-3" style="padding: 0px;">
-        <div class="card-deck">
-          
+      <div class="row">
+        <div class="col-sm-6 pt-3">
+          <div class="card-deck">
+            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+          </div>
         </div>
-        <div class="card-deck mt-3">
-          
+        <div class="col-sm-6 pt-3">
+          <div class="card-deck">
+            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+          </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

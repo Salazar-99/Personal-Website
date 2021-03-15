@@ -81,6 +81,7 @@ h1.mt-1 {
 .post-content {
     color: #ffffff;
     padding-top: 20px;
+    font-size: 19px;
 }
 
 .expand-button {
@@ -89,4 +90,31 @@ h1.mt-1 {
 
 .tag {
     font-size: 15px;
+}
+
+.card-body {
+    background-color: #2b2b2b;
+}
+
+.repo-title {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.repo-icon {
+    filter: invert(80%);
+    padding-right: 10px;
+    padding-bottom: 8px;
+}
+
+.repo-description {
+    color: #ffffff;
+}
+
+.card-footer {
+    background-color: #121212;
+}
+
+.repo-tag {
+    color: #ffffff;
 }
