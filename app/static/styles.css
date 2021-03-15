@@ -57,12 +57,10 @@ h1.mt-1 {
 }
 .post-title-block {
     background-color: #121212;
-    border-radius: 10px 10px 5px 5px;
     padding-bottom: 20px;
 }
 .post-title {
     color: #ffffff;
-    font-weight: bold;
 }
 
 .post-tags {
