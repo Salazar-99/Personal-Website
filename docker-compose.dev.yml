@@ -4,10 +4,8 @@ services:
   app:
     container_name: app
     image: personal-site-dev:latest
-    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile - "app:create_app('development')"
+    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile - --reload "app:create_app('development')"
     env_file: .env
-    environment:
-      - CONFIG=development
     volumes:
       - "./app:/app"
     ports:

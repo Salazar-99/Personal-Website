@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="static/styles.css">
     <link rel="icon" type="image/png" href="static/images/logo.png">
     {% block head %}
-    <title>{% block title %}{% endblock %}Gerardo Salazar</title>
+    <title>Gerardo Salazar{% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
 
@@ -28,8 +28,14 @@
                 <!--Navbar items-->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link" style="font-size: 20px;" href="{{ url_for('main.blog', _external=True) }}">Blog</a>
+                    </li>
+                    <!--Restore if job searching-->
+                    <!--
+                    <li class="nav-item">
                         <a class="nav-link" target="_blank" href="{{ url_for('static', filename="resume.pdf", _external=True) }}">Resume</a>
                     </li>
+                    -->
                 </ul>
             </div>
         </nav>

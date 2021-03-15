@@ -1,3 +1,92 @@
 html {
     font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+.me {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgb(168, 168, 168);
+    padding: 7px;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+}
+
+.mt-0 {
+    color: #ffffff;
+}
+
+h1.mt-1 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+}
+
+.mt-2 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.about {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.github {
+    filter: invert(100%);
+    width: 36px;
+    height: auto;
+}
+
+.linkedin {
+    filter: invert(100%);
+    width: 36px;
+    height: auto;
+}
+
+.post {
+    box-shadow: 100px white;
+}
+
+.post-card {
+    border-radius: 5px;
+}
+.post-title-block {
+    background-color: #121212;
+    border-radius: 10px 10px 5px 5px;
+    padding-bottom: 20px;
+}
+.post-title {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.post-tags {
+    color: #ffffff;
+    padding: 0px;
+}
+
+.post-content-block {
+    border-radius: 0px 0px 5px 5px;
+    border-left:solid black 1px;
+    border-right:solid black 1px;
+    border-bottom:solid black 1px;
+    background-color: #2b2b2b;
+}
+
+.post-content {
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+.expand-button {
+    background-color: #ffffff;
+}
+
+.tag {
+    font-size: 15px;
 }

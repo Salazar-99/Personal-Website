@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile app:app
+    command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile - "app:create_app('production')"
     env_file: .env
     environment:
       - CONFIG=production
