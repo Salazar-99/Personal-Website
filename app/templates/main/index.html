@@ -1,0 +1,123 @@
+{% extends "main/base.html" %} 
+{% import "_macros.html" as macros %}
+{% block content %} 
+{% block page_content %}
+<!--Title Block-->
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-flex sol-sm-auto col-md-auto col-lg-auto">
+        <h4 class="mt-0">Hi, I'm</h4>
+        <h1 class="mt-1">Gerardo Salazar</h1>
+      </div>
+      <div class="col col-sm-auto col-lg-7">
+        <p class="mt-2">I'm an avid learner and a firm believer that the real treasure of any journey is the friends we make along the way.</p>
+      </div>
+    </div>
+    <div>
+      <div class="container-fluid d-flex justify-content-lg-start 
+      justify-content-md-start justify-content-sm-center mt-5 justify-content-xs-center flex-wrap" style="padding: 0px;">
+        <a class="btn btn-primary btn-lg mr-5" id="email-button" href="mailto:gerardosalazar@utexas.edu" target="_blank" type="button">
+          Email Me
+        </a>
+      </div>
+      <div class="container-fluid d-flex justify-content-lg-start 
+      justify-content-sm-center justify-content-md-start justify-content-xs-center mt-5" style="padding: 0px;">
+        <a href="https://github.com/Salazar-99" target="_blank" class="pr-2">
+          <img class="github" src="{{ url_for('static', filename='icons/github-fill.png', _external=True) }}">  
+        </a>
+        <a href="https://www.linkedin.com/in/gerardo-salazar-62196a148/" target="_blank">
+          <img class="linkedin" src="{{ url_for('static', filename='icons/linkedin-box-fill.png', _external=True) }}">  
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--About Me-->
+<div class="jumbotron" style="padding-top: 0px;">
+  <div class="container">
+    <div class="row justify-content-center pb-4">
+      <h2 class="mt-0">About Me</h2>
+    </div>
+    <div class="container d-flex flex-column flex-lg-row align-items-start" style="padding: 0px;">
+      <div class="container pt-3" style="padding: 0px;">
+        <p class="about">
+          I double majored in Physics and Math at The University of Texas at Austin.
+          I love learning about all things science. My main academic interests are
+          physics, math, computing, and neuroscience.
+        </p>
+        <p class="about">
+          I am currently working as a Data Scientist in Houston.
+          In my spare time I enjoy golfing, combat sports, reading, and fitness.
+        </p>
+        <p class="about">
+          I really like programming in all of its forms. I've worked on projects in a variety of different
+          disciplines from web development to machine learning, embedded systems and much more. Lately I've become
+          really interested in Cloud Architecture and DevOps in an effort to round out my software engineering and data science skillset.
+        </p>
+      </div>
+      <div class="container d-flex justify-content-center pt-3">
+        <img class="me shadow" src="{{ url_for('static', filename='images/me.jpg', _external=True) }}">
+      </div>
+    </div>
+  </div>
+</div>
+<!--Last Blog Post-->
+<div class="jumbotron" style="padding-top: 0px;">
+  <div class="container">
+    <div class="row justify-content-center pb-4">
+      <h2 class="mt-0">My Blog</h2>
+    </div>
+    <div class="container d-flex flex-column flex-lg-row align-items-start pb-4" style="padding: 0px;">
+      <div class="container" style="padding: 0px;">
+        <p class="about">
+          I find that writing about the things I'm working on or reading helps me internalize what I've learned.
+          My blog is a collection of such writings and will probably include some random musings as well. 
+          I hope that my posts can offer some insight into the topics they cover or serve as reading recommendations for people curious about the same things as I am.
+          I'm happy to discuss any of my writings so if you want to reach me feel free to shoot me an email. My latest post is below.
+        </p>
+      </div>
+    </div>
+    <div class="container" style="padding: 0px;">
+      {{ macros.render_blog_post(post, id=1) }}
+    </div>
+  </div>
+</div>
+<!--Projects-->
+<div class="jumbotron" style="padding-top: 0px;">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <h2 class="mt-0">Some Projects</h2>
+    </div>
+    <div class="container d-flex flex-column flex-lg-row align-items-start">
+      <div class="row">
+        <div class="col-sm-6 pt-3">
+          <div class="card-deck">
+            {{ macros.render_project(title="This Pokemon Does Not Exist", description="Modular implementation of CVAE and GAN deep generative models for producing images of \"new\" Pokemon.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="Gravitational WaveNet", description="Implementation of a deep learning architecture for gravitational wave classification with experiment framework", tags=["Python", "Tensorflow", "Physics"], link="https://github.com/Salazar-99/Gravitational-WaveNet") }}
+          </div>
+        </div>
+        <div class="col-sm-6 pt-3">
+          <div class="card-deck">
+            {{ macros.render_project(title="PGA Analysis", description="An end-to-end Data Science project featuring PySpark, PyMC3, and reproducible reports via GNU Make.", tags=["Python", "PyMC3", "PySpark", "LaTeX", "Make"], link="https://github.com/Salazar-99/PGA-Analysis") }}
+            {{ macros.render_project(title="Bookly", description="A small Python based REPL program for managing my MongoDB-based blog. Written using the click and click-repl libraries.", tags=["Python", "Click", "MongoDB"], link="https://github.com/Salazar-99/Bookly") }}
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer-->
+<footer class="page-footer font-small pt-4" style="background-color: black;">
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+      <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+              <p><font color="white">See the <a href="https://github.com/Salazar-99/Personal-Website" target="_blank">source code</a> for this site.</font>
+          </div>
+      </div>
+  </div>
+</footer>
+{% endblock %} 
+{% endblock %}
