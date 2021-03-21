@@ -1,5 +1,5 @@
 <!--Macros for use in templates-->
-{% macro render_blog_post(post) %}
+{% macro render_blog_post(post, id) %}
     <div class="container shadow post" style="padding: 0px;">
         <div class="container post-title-block pt-3">
             <div class="row">
@@ -12,13 +12,13 @@
                         </div> 
                 </div>
                 <div class="col">
-                    <a class="btn btn-sm expand-button float-right" data-toggle="collapse" href="#post-id" role="button">
+                    <a class="btn btn-sm expand-button float-right" data-toggle="collapse" href="#post{{ id }}" role="button">
                         <img src="{{ url_for('static', filename='icons/plus.png', _external=True) }}">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container collapse post-content-block" id="post-id">
+        <div class="container collapse post-content-block" id="post{{ id }}">
             <p class="post-content">{{ post['content'] }}</p>
         </div>
     </div>

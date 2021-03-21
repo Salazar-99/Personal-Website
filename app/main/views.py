@@ -10,12 +10,12 @@ db = client[os.environ.get('ENVIRONMENT')]['post']
 @main.route('/')
 def index():
     #Get latest post
-    post = db.find_one()
-    return render_template('main/index.html', post=post)
+    post = db.find().sort("modified_date", pm.DESCENDING).limit(1)
+    return render_template('main/index.html', post=post[0])
 
 #Book blog
 @main.route('/blog')
 def blog():
-    #Get all posts
-    posts = db.find()
+    #Get all posts, newest first
+    posts = db.find().sort("modified_date", pm.DESCENDING)
     return render_template('main/blog.html', posts=posts)

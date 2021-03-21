@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="container" style="padding: 0px;">
-      {{ macros.render_blog_post(post) }}
+      {{ macros.render_blog_post(post, id=1) }}
     </div>
   </div>
 </div>
@@ -93,14 +93,14 @@
       <div class="row">
         <div class="col-sm-6 pt-3">
           <div class="card-deck">
-            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
-            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="This Pokemon Does Not Exist", description="Modular implementation of CVAE and GAN deep generative models for producing images of \"new\" Pokemon.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="Gravitational WaveNet", description="Implementation of a deep learning architecture for gravitational wave classification with experiment framework", tags=["Python", "Tensorflow", "Physics"], link="https://github.com/Salazar-99/Gravitational-WaveNet") }}
           </div>
         </div>
         <div class="col-sm-6 pt-3">
           <div class="card-deck">
-            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
-            {{ macros.render_project(title="Project", description="An end-to-end Data Science project featuring ETL, EDA, Bayesian Inference, Machine Learning models, Sphinx documentation, and reproducible reports via GNU Make.", tags=["Python", "Tensorflow"], link="https://github.com/Salazar-99/This-Pokemon-Does-Not-Exist") }}
+            {{ macros.render_project(title="PGA Analysis", description="An end-to-end Data Science project featuring PySpark, PyMC3, and reproducible reports via GNU Make.", tags=["Python", "PyMC3", "PySpark", "LaTeX", "Make"], link="https://github.com/Salazar-99/PGA-Analysis") }}
+            {{ macros.render_project(title="Bookly", description="A small Python based REPL program for managing my MongoDB-based blog. Written using the click and click-repl libraries.", tags=["Python", "Click", "MongoDB"], link="https://github.com/Salazar-99/Bookly") }}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@
 <!--Blog Posts-->
 {% for post in posts %}
     <div class="container pt-5" style="padding: 0px;">
-        {{ macros.render_blog_post(post) }}
+        {{ macros.render_blog_post(post, loop.index) }}
     </div>
 {% endfor %}
 {% endblock %} 
