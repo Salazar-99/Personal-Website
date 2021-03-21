@@ -3,14 +3,13 @@ version: '3.8'
 services:
   app:
     container_name: app
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: personal-site-prod:latest
     command: gunicorn --bind 0.0.0.0:5000 --access-logfile - --error-logfile - "app:create_app('production')"
     env_file: .env
     environment:
-      - CONFIG=production
+      - ENVIRONMENT=production
   nginx:
+    container_name: nginx
     build:
       context: nginx/
       dockerfile: Dockerfile

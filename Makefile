@@ -10,8 +10,8 @@ deploy:
 	make production
 
 build:
-	docker build -f Dockerfile -t personal-site:latest .
-	docker build -f nginx/Dockerfile -t personal-site-nginx:latest .
+	docker build -f Dockerfile -t personal-site-prod:latest .
+	docker build -f nginx/Dockerfile -t personal-site-nginx:latest ./nginx
 
 production:
 	docker-compose -f docker-compose.production.yml up
