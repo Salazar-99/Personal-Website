@@ -5,7 +5,6 @@ RUN pip install -r requirements.txt
 
 RUN mkdir /app
 COPY ./app /app
-COPY .env /app/.env
 
 ENV ENVIRONMENT=production
 
