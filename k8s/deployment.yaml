@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: personal-website
+  namespace: personal-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: personal-website
+  template:
+    metadata:
+      labels:
+        app: personal-website
+    spec: 
+      containers:
+      - name: personal-website
+        image: 573500965530.dkr.ecr.us-east-2.amazonaws.com/personalwebsite:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: MONGO_URI
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: SECRET_KEY
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+      imagePullSecrets:
+      - name: aws-ecr

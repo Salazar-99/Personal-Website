@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 from .config import config
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(".env")
 
 bootstrap = Bootstrap()
 
