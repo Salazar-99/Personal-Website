@@ -8,7 +8,6 @@ My blog is hosted on a MongoDB database via Mongo Atlas.
 
 
 I manage my blog with [Bookly](https://github.com/Salazar-99/Bookly), a REPL tool I built.
-I host this site on my Vultr VPS via Docker.
 
-
-The Flask app is served with Gunicorn and Nginx is used as a reverse-proxy.
+I host this site on my Kubernetes homelab with a Cloudflare proxy for security.
+You can see the materials for my Kubernetes cluster [here](https://github.com/Salazar-99/Athena)
