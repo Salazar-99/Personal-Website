@@ -11,4 +11,6 @@ I manage my blog with [Bookly](https://github.com/Salazar-99/Bookly), a REPL too
 
 
 I host this site on my Kubernetes homelab with a Cloudflare proxy for security.
-You can see the materials for my Kubernetes cluster [here](https://github.com/Salazar-99/Athena)
+You can see the materials for my Kubernetes cluster [here](https://github.com/Salazar-99/Athena).
+
+This application is deployed via a CI/CD pipeline consisting of GitHug Actions, AWS ECR, and FluxCD.
